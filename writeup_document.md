@@ -122,7 +122,7 @@ My final model results were:
  An architecture similar to VGGnet the well known architecture was chosen:
  
  * An architecture similar to VGGnet was chosen.
- * The VGGnet is a deep convolutional neural network for object recognition (our very same problem here) developed and trained by Oxford's renowed Visual Geometry Group which achieved very good performance on the ImageNet dataset.
+ * The VGGnet is a deep convolutional neural network for object recognition (our very same problem here) developed and trained by Oxford's renowed Visual Geometry Group which achieved very good performance on the ImageNet dataset. In my opinion, VGGNet extracts features that are slightly more general and more effective for datasets other than ILSVRC. I did tests on the dataset I'm working on, and they confirmed it.
  * Final test set accuracy is 98.2% which is very well. I think it is worth it in that scenario as explained above.
 
 
