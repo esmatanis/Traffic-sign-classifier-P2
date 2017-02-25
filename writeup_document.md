@@ -109,7 +109,7 @@ I used Adam optimizer with learning rate = 0.007. Batch size of 64 was used and 
 The code for calculating the accuracy of the model is located in the 25 cell of the Ipython notebook.
 
 My final model results were:
-* test set accuracy of 9.81%
+* test set accuracy of 98.2%
 
 
 1. Starting with pre-processing stage, I tried several color channels including RGB, YUV and RGB with CLAHE. I chose RGB with CLAHE as it gave best results and I believe color carries useful information for our problem.
@@ -118,6 +118,14 @@ My final model results were:
 4. Batch size and the size of FC layers was mostly constrained by memory issues, and adding more neurons in FC layers didn't seem to help much with the accuracy.
 5. keep_prob in dropout for FC layers was chosen to be 0.7 because a smaller value of ~0.5 led to extremely slow convergence.
 6. I used Adam optimizer as it seems to automatically tune the learning rate with time.
+
+ An architecture similar to VGGnet the well known architecture was chosen:
+ 
+ * An architecture similar to VGGnet was chosen.
+ * The VGGnet is a deep convolutional neural network for object recognition (our very same problem here) developed and trained by Oxford's renowed Visual Geometry Group which achieved very good performance on the ImageNet dataset.
+ * Final test set accuracy is 98.2% which is very well. I think it is worth it in that scenario as explained above.
+
+
 
 ###Test a Model on New Images
 
@@ -140,6 +148,6 @@ The code for making predictions on my final model is located in the 29 cell of t
 
 The code for making predictions on my final model is located in the 30-31 cell of the Ipython notebook.
 
-For the Bicycle sign, classifier is very uncertain with the best prediction because it is very different than German set. However, it is very certain about remaining signs.
-
 ![alt text][image2]
+
+For the Bicycle sign, classifier is very uncertain with the best prediction because it is very different than German set. The german road priority sign is the same with Bicycle sign present here in two big aspects (geometric shape, Color) While the Bicycle sign has only the Bicycle drawing (less than 10% of picture) so the classifier based on its own training experience it is very certain that it is a priority road sign not a Bicycle one so it did well in trying to capture the sign. The Bicycle sign he knows well has a different geometric shape and color.
